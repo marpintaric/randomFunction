@@ -1,14 +1,10 @@
-var min=4;
-    var max=5;
-    var random = Math.random() * (+max - +min) + +min;
-    document.write("Random Number Generated : " + random );
+function getRandomArbitrary(min, max) {
+        if(!isNaN(min) &&  !isNaN(max)){
+            return Math.floor(Math.random() * (max - min) + min);
 
-
-/*
-
-function generateRandomNumber(min_value , max_value) {
-
-   let random_number = Math.random() * (max-min) + min;
-    return Math.floor(random_number);
-}
-console.log(generateRandomNumber()); */
+        }
+        else {
+            return false;
+        }
+  }
+console.log(getRandomArbitrary(5, 8));
